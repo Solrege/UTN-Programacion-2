@@ -10,9 +10,10 @@ public class ejercicio09 {
 
         CitaMedica cita1 = new CitaMedica(
                 LocalDate.of(2025, 9, 16),
-                LocalTime.of(10, 30),
-                p1,
-                pr1);
+                LocalTime.of(10, 30));
+
+        cita1.setPaciente(p1);
+        cita1.setProfesional(pr1);
 
         System.out.println(cita1);
     }

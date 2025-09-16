@@ -4,9 +4,8 @@ public class Render {
     private String formato;
     private Proyecto proyecto; // Asociación unidireccional
 
-    public Render(String formato, Proyecto proyecto) {
+    public Render(String formato) {
         this.formato = formato;
-        this.proyecto = proyecto;
     }
 
     public String getFormato() {

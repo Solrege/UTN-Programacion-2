@@ -4,9 +4,8 @@ public class Impuesto {
     private double monto;
     private Contribuyente contribuyente; // Asociación unidireccional
 
-    public Impuesto(double monto, Contribuyente contribuyente) {
+    public Impuesto(double monto) {
         this.monto = monto;
-        this.contribuyente = contribuyente;
     }
 
 

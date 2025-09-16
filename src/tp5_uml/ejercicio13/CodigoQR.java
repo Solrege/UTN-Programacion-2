@@ -4,9 +4,8 @@ public class CodigoQR {
     private String valor;
     private Usuario usuario; // Asociación unidireccional
 
-    public CodigoQR(String valor, Usuario usuario) {
+    public CodigoQR(String valor) {
         this.valor = valor;
-        this.usuario = usuario;
     }
 
     public String getValor() {

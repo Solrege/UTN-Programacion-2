@@ -12,11 +12,9 @@ public class CitaMedica {
     private Paciente paciente;
     private Profesional profesional;
 
-    public CitaMedica(LocalDate fecha, LocalTime hora, Paciente paciente, Profesional profesional) {
+    public CitaMedica(LocalDate fecha, LocalTime hora) {
         this.fecha = fecha;
         this.hora = hora;
-        this.paciente = paciente;
-        this.profesional = profesional;
     }
 
     public LocalDate getFecha() {

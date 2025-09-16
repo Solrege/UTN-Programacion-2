@@ -4,9 +4,8 @@ public class Cancion {
     private String titulo;
     private Artista artista; // Asociación unidireccional
 
-    public Cancion(String titulo, Artista artista) {
+    public Cancion(String titulo) {
         this.titulo = titulo;
-        this.artista = artista;
     }
 
     public String getTitulo() {
