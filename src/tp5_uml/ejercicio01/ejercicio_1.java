@@ -5,8 +5,7 @@ public class ejercicio_1 {
     public static void main (String [] args) {
         
         // composición: Pasaporte contiene una Foto
-        Foto foto = new Foto("imagen_base64_o_ruta.jpg", "jpg");
-        Pasaporte pasaporte = new Pasaporte("A1234567", "2025-09-14", foto);
+        Pasaporte pasaporte = new Pasaporte("A1234567", "2025-09-14", "imagen_base64_o_ruta", "jpg");
 
         // asociación bidireccional: Titular <-> Pasaporte
         Titular titular = new Titular("Juan Perez", "12345678");
