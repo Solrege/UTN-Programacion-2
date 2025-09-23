@@ -1,12 +1,14 @@
 package tp5_uml.ejercicio01;
 
+import java.time.LocalDate;
+
 public class Pasaporte {
     private String numero;
-    private String fechaEmision;
+    private LocalDate fechaEmision;
     private Foto foto; // composición: Pasaporte contiene a foto
     private Titular titular;  // asociación bidireccional con Titular
 
-    public Pasaporte(String numero, String fechaEmision, String foto, String formato) {
+    public Pasaporte(String numero, LocalDate fechaEmision, String foto, String formato) {
         this.numero = numero;
         this.fechaEmision = fechaEmision;
 
@@ -15,18 +17,34 @@ public class Pasaporte {
     }
 
     public String getNumero() {
+
         return numero;
     }
 
-    public String getFechaEmision() {
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public LocalDate getFechaEmision() {
+
         return fechaEmision;
     }
 
+    public void setFechaEmision(LocalDate fechaEmision) {
+        this.fechaEmision = fechaEmision;
+    }
+
     public Foto getFoto() {
+
         return foto;
     }
 
+    public void setFoto(Foto foto) {
+        this.foto = foto;
+    }
+
     public Titular getTitular() {
+
         return titular;
     }
 
@@ -41,6 +59,10 @@ public class Pasaporte {
 
     @Override
     public String toString() {
-        return "Pasaporte[numero=" + numero + ", fechaEmision=" + fechaEmision + ", foto=" + foto + "]";
+        return "Pasaporte{" +
+                "numero='" + numero + '\'' +
+                ", fechaEmision='" + fechaEmision + '\'' +
+                ", foto=" + foto +
+                '}';
     }
 }

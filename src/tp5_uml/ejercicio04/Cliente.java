@@ -1,4 +1,4 @@
-package ejercicios_tp5;
+package tp5_uml.ejercicio04;
 
 public class Cliente {
     private String nombre;
@@ -14,21 +14,36 @@ public class Cliente {
         return nombre;
     }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     public String getDni() {
         return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
     }
 
     public TarjetaDeCredito getTarjeta() {
         return tarjeta;
     }
 
-    // package-private: controlamos la bidireccionalidad desde TarjetaDeCredito
-    void setTarjeta(TarjetaDeCredito tarjeta) {
+    // establece la asociación y mantiene la bidireccionalidad
+    public void setTarjeta(TarjetaDeCredito tarjeta) {
         this.tarjeta = tarjeta;
+
+        if (tarjeta != null && tarjeta.getCliente() != this) {
+            tarjeta.setCliente(this);
+        }
     }
 
     @Override
     public String toString() {
-        return "Cliente[nombre=" + nombre + ", dni=" + dni + "]";
+        return "Cliente{" +
+                "nombre='" + nombre + '\'' +
+                ", dni='" + dni + '\'' +
+                '}';
     }
 }

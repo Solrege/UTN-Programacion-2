@@ -11,19 +11,31 @@ public class Titular {
     }
 
     public String getNombre() {
+
         return nombre;
     }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     public String getDni() {
+
         return dni;
     }
 
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
     public Pasaporte getPasaporte() {
+
         return pasaporte;
     }
 
     // establecer asociación desde el lado del Titular
-    void setPasaporte(Pasaporte pasaporte) {
+
+    public void setPasaporte(Pasaporte pasaporte) {
         this.pasaporte = pasaporte;
 
         if (pasaporte != null && pasaporte.getTitular() != this) {
@@ -33,6 +45,10 @@ public class Titular {
 
     @Override
     public String toString() {
-        return "Titular[nombre=" + nombre + ", dni=" + dni + "]";
+        return "Titular{" +
+                "nombre='" + nombre + '\'' +
+                ", dni='" + dni + '\'' +
+                ", pasaporte=" + pasaporte +
+                '}';
     }
 }

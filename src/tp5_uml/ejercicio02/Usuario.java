@@ -1,4 +1,4 @@
-package ejercicios_tp5;
+package tp5_uml.ejercicio02;
 
 public class Usuario {
     private String nombre;
@@ -11,24 +11,41 @@ public class Usuario {
     }
 
     public String getNombre() {
+
         return nombre;
     }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     public String getDni() {
+
         return dni;
     }
 
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
     public Celular getCelular() {
+
         return celular;
     }
 
-    // package-private para controlar la bidireccionalidad desde Celular
+    // establece la asociación y mantiene la bidireccionalidad
     public void setCelular(Celular celular) {
         this.celular = celular;
+
+        if (celular != null && celular.getUsuario() != this) {
+            celular.setUsuario(this);
+        }
     }
 
     @Override
     public String toString() {
-        return "Usuario[nombre=" + nombre + ", dni=" + dni + "]";
+        return "Usuario{" +
+                "nombre='" + nombre + '\'' +
+                ", dni='" + dni + '\'' +
+                '}';
     }
 }

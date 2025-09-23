@@ -1,10 +1,10 @@
 package tp5_uml.ejercicio08;
 
-public class Usuario_{
+public class Usuario {
     private String nombre;
     private String email;
 
-    public Usuario_(String nombre, String email) {
+    public Usuario(String nombre, String email) {
         this.nombre = nombre;
         this.email = email;
     }

@@ -1,6 +1,4 @@
-package tp_4_poo;
-
-import java.sql.SQLOutput;
+package tp4_poo;
 
 public class mainEmpleado {
     public static void main(String[] args) {

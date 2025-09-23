@@ -1,4 +1,4 @@
-package tp_4_poo;
+package tp4_poo;
 
 public class Empleado {
     private int id;

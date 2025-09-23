@@ -1,4 +1,4 @@
-package ejercicios_tp5;
+package tp5_uml.ejercicio05;
 
 public class Propietario {
     private String nombre;

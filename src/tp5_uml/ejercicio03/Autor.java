@@ -1,4 +1,4 @@
-package ejercicios_tp5;
+package tp5_uml.ejercicio03;
 
 public class Autor {
     private String nombre;
@@ -13,12 +13,23 @@ public class Autor {
         return nombre;
     }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     public String getNacionalidad() {
         return nacionalidad;
     }
 
+    public void setNacionalidad(String nacionalidad) {
+        this.nacionalidad = nacionalidad;
+    }
+
     @Override
     public String toString() {
-        return "Autor[nombre=" + nombre + ", nacionalidad=" + nacionalidad + "]";
+        return "Autor{" +
+                "nombre='" + nombre + '\'' +
+                ", nacionalidad='" + nacionalidad + '\'' +
+                '}';
     }
 }
