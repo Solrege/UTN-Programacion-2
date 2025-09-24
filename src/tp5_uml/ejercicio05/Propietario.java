@@ -14,21 +14,35 @@ public class Propietario {
         return nombre;
     }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     public String getDni() {
         return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
     }
 
     public Computadora getComputadora() {
         return computadora;
     }
 
-    // package-private: controlamos la bidireccionalidad desde Computadora
-    void setComputadora(Computadora computadora) {
+    public void setComputadora(Computadora computadora) {
         this.computadora = computadora;
+
+        if (computadora != null && computadora.getPropietario() != this) {
+            computadora.setPropietario(this);
+        }
     }
 
     @Override
     public String toString() {
-        return "Propietario[nombre=" + nombre + ", dni=" + dni + "]";
+        return "Propietario{" +
+                "nombre='" + nombre + '\'' +
+                ", dni='" + dni + '\'' +
+                '}';
     }
 }

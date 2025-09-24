@@ -11,7 +11,5 @@ public class ejercicio_8 {
 
         System.out.println(doc);
         System.out.println("Firma del documento: " + doc.getFirma());
-        // Aplicando Tell, Don't Ask: delegamos la impresión del usuario de la firma
-        doc.imprimirUsuarioDeFirma();
     }
 }

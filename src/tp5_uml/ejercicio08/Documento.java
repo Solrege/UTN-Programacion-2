@@ -3,8 +3,7 @@ package tp5_uml.ejercicio08;
 public class Documento {
     private String titulo;
     private String contenido;
-    // composición: Documento contiene una FirmaDigital (creada internamente)
-    private final FirmaDigital firma;
+    private final FirmaDigital firma; // composición: Documento contiene una FirmaDigital (creada internamente)
 
     public Documento(String titulo, String contenido, int codigoHash, String fecha, Usuario usuario) {
         this.titulo = titulo;
@@ -16,8 +15,16 @@ public class Documento {
         return titulo;
     }
 
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
     public String getContenido() {
         return contenido;
+    }
+
+    public void setContenido(String contenido) {
+        this.contenido = contenido;
     }
 
     public FirmaDigital getFirma() {
@@ -26,12 +33,10 @@ public class Documento {
 
     @Override
     public String toString() {
-        return "Documento[titulo=" + titulo + ", contenido=" + contenido + ", firma=" + firma + "]";
-    }
-
-    // Tell, Don't Ask: Documento delega a la FirmaDigital la impresión de su usuario/estado
-    public void imprimirUsuarioDeFirma() {
-        System.out.println("Documento: " + titulo + " -> Usuario de la firma:");
-        firma.imprimirInfo();
+        return "Documento{" +
+                "titulo='" + titulo + '\'' +
+                ", contenido='" + contenido + '\'' +
+                ", firma=" + firma +
+                '}';
     }
 }

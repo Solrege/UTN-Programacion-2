@@ -3,8 +3,7 @@ package tp5_uml.ejercicio08;
 public class FirmaDigital {
     private int codigoHash;
     private String fecha;
-    // agregación: FirmaDigital -> Usuario
-    private Usuario usuario;
+    private Usuario usuario;// agregación: FirmaDigital -> Usuario
 
     public FirmaDigital(int codigoHash, String fecha, Usuario usuario) {
         this.codigoHash = codigoHash;
@@ -16,21 +15,32 @@ public class FirmaDigital {
         return codigoHash;
     }
 
+    public void setCodigoHash(int codigoHash) {
+        this.codigoHash = codigoHash;
+    }
+
     public String getFecha() {
         return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
     }
 
     public Usuario getUsuario() {
         return usuario;
     }
 
-    @Override
-    public String toString() {
-        return "FirmaDigital[codigoHash=" + codigoHash + ", fecha=" + fecha + ", usuario=" + usuario + "]";
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
-    // Tell, Don't Ask: la firma se encarga de imprimir su usuario/estado
-    public void imprimirInfo() {
-        System.out.println("FirmaDigital -> codigoHash=" + codigoHash + ", fecha=" + fecha + ", usuario=" + usuario);
+    @Override
+    public String toString() {
+        return "FirmaDigital{" +
+                "codigoHash=" + codigoHash +
+                ", fecha='" + fecha + '\'' +
+                ", usuario=" + usuario +
+                '}';
     }
 }

@@ -1,5 +1,8 @@
 package tp5_uml.ejercicio06;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 public class ejercicio_6 {
     
     public static void main (String [] args) {
@@ -9,7 +12,11 @@ public class ejercicio_6 {
         // Agregación : Reserva -> Mesa
         Mesa mesa = new Mesa("M5", 4);
 
-        Reserva reserva = new Reserva("2025-10-01", "20:30", cliente, mesa);
+        Reserva reserva = new Reserva(
+                LocalDate.of(2025, 9, 16),
+                LocalTime.of(10, 30),
+                mesa);
+        reserva.setCliente(cliente);
 
         System.out.println(reserva);
         System.out.println("Cliente de la reserva: " + reserva.getCliente());

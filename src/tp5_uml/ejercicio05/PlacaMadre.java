@@ -13,12 +13,23 @@ public class PlacaMadre {
         return modelo;
     }
 
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
     public String getChipset() {
         return chipset;
     }
 
+    public void setChipset(String chipset) {
+        this.chipset = chipset;
+    }
+
     @Override
     public String toString() {
-        return "PlacaMadre[modelo=" + modelo + ", chipset=" + chipset + "]";
+        return "PlacaMadre{" +
+                "modelo='" + modelo + '\'' +
+                ", chipset='" + chipset + '\'' +
+                '}';
     }
 }

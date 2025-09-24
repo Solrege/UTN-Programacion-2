@@ -3,12 +3,10 @@ package tp5_uml.ejercicio05;
 public class Computadora {
     private String marca;
     private String numeroSerie;
-    // composición: Computadora contiene una PlacaMadre (pertenece a la Computadora)
-    private PlacaMadre placaMadre;
-    // asociacion bidireccional con Propietario
-    private Propietario propietario;
+    private PlacaMadre placaMadre;  // composición: Computadora contiene una PlacaMadre
+    private Propietario propietario; // asociacion bidireccional con Propietario
 
-    // Ahora el constructor crea internamente la PlacaMadre (composición)
+    // El constructor crea internamente la PlacaMadre (composición)
     public Computadora(String marca, String numeroSerie, String modeloPlaca, String chipset) {
         this.marca = marca;
         this.numeroSerie = numeroSerie;
@@ -19,12 +17,24 @@ public class Computadora {
         return marca;
     }
 
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
     public String getNumeroSerie() {
         return numeroSerie;
     }
 
+    public void setNumeroSerie(String numeroSerie) {
+        this.numeroSerie = numeroSerie;
+    }
+
     public PlacaMadre getPlacaMadre() {
         return placaMadre;
+    }
+
+    public void setPlacaMadre(PlacaMadre placaMadre) {
+        this.placaMadre = placaMadre;
     }
 
     public Propietario getPropietario() {
@@ -34,6 +44,7 @@ public class Computadora {
     // establece propietario y mantiene la bidireccionalidad
     public void setPropietario(Propietario propietario) {
         this.propietario = propietario;
+
         if (propietario != null && propietario.getComputadora() != this) {
             propietario.setComputadora(this);
         }
@@ -41,6 +52,11 @@ public class Computadora {
 
     @Override
     public String toString() {
-        return "Computadora[marca=" + marca + ", numeroSerie=" + numeroSerie + ", placaMadre=" + placaMadre + "]";
+        return "Computadora{" +
+                "marca='" + marca + '\'' +
+                ", numeroSerie='" + numeroSerie + '\'' +
+                ", placaMadre=" + placaMadre +
+                ", propietario=" + propietario +
+                '}';
     }
 }

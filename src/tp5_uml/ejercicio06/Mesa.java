@@ -13,12 +13,23 @@ public class Mesa {
         return numero;
     }
 
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
     public int getCapacidad() {
         return capacidad;
     }
 
+    public void setCapacidad(int capacidad) {
+        this.capacidad = capacidad;
+    }
+
     @Override
     public String toString() {
-        return "Mesa[numero=" + numero + ", capacidad=" + capacidad + "]";
+        return "Mesa{" +
+                "numero='" + numero + '\'' +
+                ", capacidad=" + capacidad +
+                '}';
     }
 }

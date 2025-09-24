@@ -11,12 +11,9 @@ public class ejercicio_7 {
 
         Vehiculo vehiculo = new Vehiculo("ABC123", "ModeloX", motor);
         vehiculo.setConductor(conductor);
-        // mantener la bidireccionalidad entre Vehiculo y Motor
-        vehiculo.setMotor(motor);
 
         System.out.println(vehiculo);
         System.out.println("Motor del vehiculo: " + vehiculo.getMotor());
-        System.out.println("Vehiculo del motor: " + motor.getVehiculo());
         System.out.println("Conductor del vehiculo: " + vehiculo.getConductor());
     }
 }
